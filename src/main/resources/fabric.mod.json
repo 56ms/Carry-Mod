@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "carry-mod",
+  "version": "${version}",
+  "name": "Carry-Mod",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/carry-mod/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.power16.carryMod.client.CarryModDataGenerator"
+    ],
+    "client": [
+      "com.power16.carryMod.client.CarryModClient"
+    ],
+    "main": [
+      "com.power16.carryMod.CarryMod"
+    ]
+  },
+  "mixins": [
+    "carry-mod.mixins.json",
+    {
+      "config": "carry-mod.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
